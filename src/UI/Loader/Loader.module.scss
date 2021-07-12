@@ -1,0 +1,14 @@
+.Loader {
+    height: 70px;
+    width: 70px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    animation: rotate 2s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
