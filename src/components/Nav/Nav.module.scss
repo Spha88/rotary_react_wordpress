@@ -1,9 +1,11 @@
+@import '../../assets/styles/mixin.scss';
+
 .Nav {
-    background-color: #f8f9fa;
-    border-top: 1px solid rgba(187, 195, 209, 0.719);
-    border-bottom: 1px solid rgba(187, 195, 209, 0.719);
+    background-color: $grey;
+    border-top: 1px solid $border-grey;
+    border-bottom: 1px solid $border-grey;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     ul {
         width: 1024px;
         display: flex;
@@ -19,7 +21,7 @@
             padding-left: 20px;
             text-overflow: ellipsis;
             white-space: nowrap;
-            color: #5e717d;
+            color: $text-color;
             font-weight: 700;
             transition: color .3s ease;
             &::after {
@@ -37,7 +39,7 @@
                 transition: all .3s ease;
             }
             &:hover {
-                color: #0197c1;
+                color: $rotary-sky-blue;
                 &::after {
                     left: 0;
                 }
