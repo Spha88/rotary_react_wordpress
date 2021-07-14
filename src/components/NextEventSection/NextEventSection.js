@@ -27,7 +27,6 @@ const NextEventSection = () => {
 
     const { loading, error, event } = state;
 
-    console.log(event)
     return (
         <div className={styles.NextEventSection}
             style={{ backgroundImage: `url(${textured_bg})` }}
