@@ -4,6 +4,7 @@ import { extractor, removeTags } from '../../lib/utils';
 import styles from './AboutSection.module.scss';
 import Loader from '../../UI/Loader/Loader';
 import Button from '../../UI/Button/Button';
+import ErrorLoading from '../../UI/ErrorLoading/ErrorLoading';
 
 const AboutSection = () => {
 
@@ -42,17 +43,9 @@ const AboutSection = () => {
                 </div>
             }
 
-            {loading &&
-                <div className={styles.LoaderContainer}><Loader /></div>
-            }
+            {loading && <div className={styles.LoaderContainer}><Loader /></div>}
 
-            {error &&
-                <div className={styles.ErrorContainer}>
-                    <h3>Error loading data</h3>
-                    <p>Check your internet connection.</p>
-                    <p>If your computer is connected, contact your webmaster.</p>
-                </div>
-            }
+            {error && <ErrorLoading />}
         </div>
 
     )
