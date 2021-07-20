@@ -33,12 +33,12 @@ const AboutSection = () => {
         <div className={styles.AboutSection}>
             {!loading && !error &&
                 <div className={styles.ContentContainer}>
-                    <h1>{aboutPage.title}</h1>
-                    <p
-                        className={styles.Content}
-                        dangerouslySetInnerHTML={{ __html: extractor(removeTags(aboutPage.content), 100) }}>
-                    </p>
-                    <Button label="Read More" />
+                    <div className={styles.Content}>
+                        <h1>{aboutPage.title}</h1>
+                        <p dangerouslySetInnerHTML={{ __html: extractor(removeTags(aboutPage.content), 100) }}>
+                        </p>
+                        <Button label="Read More" />
+                    </div>
                 </div>
             }
 
@@ -53,8 +53,6 @@ const AboutSection = () => {
                     <p>If your computer is connected, contact your webmaster.</p>
                 </div>
             }
-
-
         </div>
 
     )

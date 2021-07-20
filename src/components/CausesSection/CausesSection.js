@@ -39,7 +39,7 @@ const CausesSection = () => {
                                 <div className={styles.CardImage} style={{ backgroundImage: `url(${cause.node.featuredImage.node.sourceUrl})` }}></div>
                                 <div className={styles.CardBody} >
                                     <h1>{cause.node.title}</h1>
-                                    <p dangerouslySetInnerHTML={{ __html: extractor(removeTags(cause.node.content), 30) }}></p>
+                                    <p dangerouslySetInnerHTML={{ __html: extractor(removeTags(cause.node.content), 25) }}></p>
                                     <a href="http://" target="_blank" rel="noopener noreferrer">Learn more</a>
                                 </div>
                             </div>

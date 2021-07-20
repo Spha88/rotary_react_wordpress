@@ -1,24 +1,30 @@
 @import '../../assets/styles/mixin.scss';
 
 .AboutSection {
-    padding: 2rem 1rem 4rem 1rem;
+    padding: 4rem 1rem 4rem 1rem;
     background-color: $grey;
-    // border-bottom: 2px solid $rotary-dark-blue;
     min-height: 500px;
     .ContentContainer {
-        width: 1024px;
+        max-width: 1200px;
+        width: 100%;
         margin: 0 auto;
         color: $text-color;
+        .Content {
+            max-width: 800px;
+            width: 100%;
+        }
         h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             color: $rotary-dark-blue;
             margin: 0 0 2rem 0;
+            font-weight: 400;
         }
         img {
             width: 100%;
         }
-        .Content {
-            font-size: 1.3em;
+        p {
+            font-size: 1.2em;
+            font-weight: 300;
             line-height: 1.7;
             padding-bottom: 1.5rem;
         }
