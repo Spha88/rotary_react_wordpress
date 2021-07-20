@@ -3,6 +3,7 @@ import { getEvents } from '../../lib/api';
 import Loader from '../../UI/Loader/Loader';
 import styles from './NextEventSection.module.scss';
 import textured_bg from '../../assets/images/textured_bg.jpg';
+import ErrorLoading from '../../UI/ErrorLoading/ErrorLoading';
 
 const NextEventSection = () => {
     const [state, setState] = useState({
@@ -56,17 +57,10 @@ const NextEventSection = () => {
                 </div>
             }
 
-            {loading &&
-                <div className={styles.LoaderContainer}><Loader /></div>
-            }
+            {loading && <Loader />}
 
-            {error &&
-                <div className={styles.ErrorContainer}>
-                    <h3>Error loading data</h3>
-                    <p>Check your internet connection.</p>
-                    <p>If your computer is connected, contact your webmaster.</p>
-                </div>
-            }
+            {error && <ErrorLoading />}
+
         </div>
     )
 }
