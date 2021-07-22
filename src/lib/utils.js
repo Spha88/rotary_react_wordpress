@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 /** Remove tags from html */
 export const removeTags = (str) => {
     if ((str === null) || (str === ''))
@@ -20,3 +22,8 @@ export const extractor = (str, number = 15) => {
     shortString = array.length > number ? `${shortString}...` : shortString;
     return shortString;
 };
+
+// Format date from wordpress
+export const formatDate = date => {
+    return moment(date).format("D MMM YYYY")
+}

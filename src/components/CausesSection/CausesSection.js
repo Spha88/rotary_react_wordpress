@@ -26,7 +26,6 @@ const CausesSection = () => {
     }, [])
 
     const { loading, error, causes } = state;
-    console.log(causes);
 
     return (
         <div className={styles.CausesSection} style={{ backgroundImage: `url(${textured_bg})` }}>

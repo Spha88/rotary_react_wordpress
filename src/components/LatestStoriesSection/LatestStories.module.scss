@@ -12,12 +12,33 @@
         display: flex;
         justify-content: space-between;
         .LastStory {
+            display: flex;
+            align-items: flex-end;
             width: 50%;
+            padding: 1em 1em 3em;
             @include box-shadow-hover;
             background : {
                 size: cover;
                 position: center center;
                 repeat: no-repeat;
+            }
+            .LastStoryContent {
+                text-shadow: 2px 3px 5px #000;
+                h1 {
+                    color: $white;
+                }
+                .LastPostDate {
+                    display: flex;
+                    align-items: center;
+                    color: $white;
+                    svg {
+                        width: 20px;
+                        margin-right: 10px;
+                    }
+                }
+                a {
+                    color: $white;
+                }
             }
         }
         .LastTwoStories {
@@ -36,8 +57,15 @@
                     padding: 1rem;
                     width: 50%;
                     .Time {
+                        display: flex;
+                        align-items: center;
                         font-size: .8em;
                         margin: 0;
+                        svg {
+                            width: 20px;
+                            margin-right: 5px;
+                            stroke: $rotary-dark-blue;
+                        }
                     }
                 }
             }
