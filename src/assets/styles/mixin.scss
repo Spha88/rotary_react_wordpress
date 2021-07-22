@@ -13,3 +13,13 @@ $border-grey: rgba(187, 195, 209, 0.719);
 /*Fonts*/
 $heading-font: Roboto Slab,TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif;
 $body-font: Open Sans,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+
+/*Mixin */
+@mixin box-shadow-hover {
+    transition: box-shadow 200ms linear;
+    &:hover {
+        box-shadow: 1px 3px 16px 1px rgba(0,0,0,0.61);
+        -webkit-box-shadow: 1px 3px 16px 1px rgba(0,0,0,0.61);
+        -moz-box-shadow: 1px 3px 16px 1px rgba(0,0,0,0.61);
+    }
+}

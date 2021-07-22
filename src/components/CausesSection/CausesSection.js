@@ -3,6 +3,7 @@ import { getCauses } from '../../lib/api';
 import { extractor, removeTags } from '../../lib/utils';
 import styles from './CausesSection.module.scss';
 import textured_bg from '../../assets/images/textured_bg.jpg';
+import { Container } from '../../UI/Container';
 
 
 const CausesSection = () => {
@@ -30,7 +31,7 @@ const CausesSection = () => {
     return (
         <div className={styles.CausesSection} style={{ backgroundImage: `url(${textured_bg})` }}>
             {!loading && !error &&
-                <div className={styles.CausesContainer}>
+                <Container>
                     <h1 className={styles.Heading}>Our causes</h1>
                     <p className={styles.Lead}>Rotary is dedicated to causes that build international relationships, improve lives, and create a better world to support our peace efforts and end polio forever.</p>
                     <div className={styles.Cards}>
@@ -45,7 +46,7 @@ const CausesSection = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </Container>
             }
         </div>
     )

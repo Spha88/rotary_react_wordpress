@@ -5,6 +5,7 @@ import styles from './AboutSection.module.scss';
 import Loader from '../../UI/Loader/Loader';
 import Button from '../../UI/Button/Button';
 import ErrorLoading from '../../UI/ErrorLoading/ErrorLoading';
+import { Container } from '../../UI/Container';
 
 const AboutSection = () => {
 
@@ -33,14 +34,13 @@ const AboutSection = () => {
     return (
         <div className={styles.AboutSection}>
             {!loading && !error &&
-                <div className={styles.ContentContainer}>
+                <Container>
                     <div className={styles.Content}>
                         <h1>{aboutPage.title}</h1>
-                        <p dangerouslySetInnerHTML={{ __html: extractor(removeTags(aboutPage.content), 100) }}>
-                        </p>
+                        <p dangerouslySetInnerHTML={{ __html: extractor(removeTags(aboutPage.content), 100) }}></p>
                         <Button label="Read More" />
                     </div>
-                </div>
+                </Container>
             }
 
             {loading && <div className={styles.LoaderContainer}><Loader /></div>}

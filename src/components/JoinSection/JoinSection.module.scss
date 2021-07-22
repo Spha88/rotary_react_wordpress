@@ -5,34 +5,28 @@
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 60% auto;
-    .ContentContainer {
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 3rem 0;
-        .Content {
-            width: 40%;
-            h1 {
-                color: $rotary_sky_blue;
-                font-size: 2.5rem;
-                font-weight: normal;
-            }
-            p {
-                font-size: 1.3rem;
-                line-height: 2rem;
-                font-weight: 300;
-                margin-bottom: 3rem;
-            }
-            button {
-                outline: none;
-                border: none;
-                background-color: $rotary_sky_blue;
-                color: $white;
-                text-transform: uppercase;
-                font-size: 1rem;
-                letter-spacing: 1px;
-                padding: 20px 60px;
-            }
+    .Content {
+        width: 40%;
+        h1 {
+            color: $rotary_sky_blue;
+            font-size: 2.5rem;
+            font-weight: normal;
+        }
+        p {
+            font-size: 1.3rem;
+            line-height: 2rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
+        button {
+            outline: none;
+            border: none;
+            background-color: $rotary_sky_blue;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            padding: 20px 60px;
         }
     }
 }

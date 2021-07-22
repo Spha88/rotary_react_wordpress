@@ -2,42 +2,42 @@
 
 .LatestStories {
     padding: 5rem 1rem;
-    .Container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        h1 {
-            color: $rotary-dark-blue;
-            font-size: 3rem;
-            margin-top: 0;
-            font-weight: 400;
-        }
-        .Content {
-            display: flex;
-            justify-content: space-between;
-            .LastStory {
-                width: 50%;
-                background-size: cover;
-                background-position: center center;
-                background-repeat: no-repeat;
+    h1 {
+        color: $rotary-dark-blue;
+        font-size: 3rem;
+        margin-top: 0;
+        font-weight: 400;
+    }
+    .Content {
+        display: flex;
+        justify-content: space-between;
+        .LastStory {
+            width: 50%;
+            @include box-shadow-hover;
+            background : {
+                size: cover;
+                position: center center;
+                repeat: no-repeat;
             }
-            .LastTwoStories {
-                width: 48%;
-                .Story {
-                    display: flex;
-                    &:first-child {
-                        margin-bottom: 1rem;
-                    }
-                    img {
-                        width: 50%;
-                    }
-                    .Details {
-                        padding: 1rem;
-                        width: 50%;
-                        .Time {
-                            font-size: .8em;
-                            margin: 0;
-                        }
+        }
+        .LastTwoStories {
+            width: 48%;
+            .Story {
+                display: flex;
+                background: $grey;
+                @include box-shadow-hover;
+                &:first-child {
+                    margin-bottom: 1rem;
+                }
+                img {
+                    width: 50%;
+                }
+                .Details {
+                    padding: 1rem;
+                    width: 50%;
+                    .Time {
+                        font-size: .8em;
+                        margin: 0;
                     }
                 }
             }

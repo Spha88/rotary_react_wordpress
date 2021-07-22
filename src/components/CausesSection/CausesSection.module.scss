@@ -2,58 +2,61 @@
 
 .CausesSection {
     padding: 2rem 0 5rem 0;
-    .CausesContainer {
-        max-width: 1200px;
-        width: 100%;
+    .Heading {
+        margin: 0;
+        margin-bottom: 3rem;
+        color: $rotary-yellow;
+        font-size: 4rem;
+        font-weight: normal;
+        text-align: center;
+    }
+    .Lead {
+        font-size: 1.4rem;
+        line-height: normal;
+        text-align: center;
+        max-width: 700px;
         margin: 0 auto;
-        .Heading {
-            margin: 0;
-            margin-bottom: 3rem;
-            color: $rotary-yellow;
-            font-size: 4rem;
-            font-weight: normal;
-            text-align: center;
-        }
-        .Lead {
-            font-size: 1.4rem;
-            line-height: normal;
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 0 0 3rem 0;
-        }
-        .Cards {
-            display: flex;
-            justify-content: space-between;
-            .Card {
-                width: 32%;
-                transition: box-shadow 200ms linear;
-                background-color: $white;
-                &:hover {
-                    box-shadow: 1px 3px 16px 1px rgba(0,0,0,0.61);
-                    -webkit-box-shadow: 1px 3px 16px 1px rgba(0,0,0,0.61);
-                    -moz-box-shadow: 1px 3px 16px 1px rgba(0,0,0,0.61);
+        padding: 0 0 3rem 0;
+    }
+    .Cards {
+        display: flex;
+        justify-content: space-between;
+        .Card {
+            width: 32%;
+            background-color: $white;
+            @include box-shadow-hover;
+            .CardImage {
+                width: 100%;
+                height: 300px !important;
+                position: relative;
+                background: {
+                    size: cover;
+                    position: center center;
                 }
-                .CardImage {
-                    width: 100%;
-                    height: 300px !important;
-                    background-size: cover;
-                    background-position: center center;
+                
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border: $rotary-yellow 1px solid;
+                    left: 0;
+                    top: 0;
+                    transform: translate(5%, 5%);
+                    width: 90%;
+                    height: 90%;
                 }
-                .CardBody {
-                    padding: 1rem 1.5rem 2rem;
-                    text-align: center;
-                    h1 {
-                        font-size: 1.1rem;
-                    }
-                    a {
-                        display: inline-block;
-                        color: $rotary-sky-blue;
-                        font-weight:  500;
-                        transition: color 200ms linear;
-                        &:hover {
-                            color: $rotary-dark-blue;
-                        }
+            }
+            .CardBody {
+                padding: 1rem 1.5rem 2rem;
+                text-align: center;
+                h1 { font-size: 1.1rem }
+                a {
+                    display: inline-block;
+                    color: $rotary-sky-blue;
+                    font-weight:  500;
+                    transition: color 200ms linear;
+                    &:hover {
+                        color: $rotary-dark-blue;
                     }
                 }
             }

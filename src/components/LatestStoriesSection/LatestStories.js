@@ -3,11 +3,12 @@ import styles from './LatestStories.module.scss';
 import story_1 from '../../assets/images/story_1.jpg';
 import story_2 from '../../assets/images/story_2.jpg';
 import story_3 from '../../assets/images/story_3.jpg';
+import { Container } from '../../UI/Container';
 
 const LatestStories = () => {
     return (
         <div className={styles.LatestStories}>
-            <div className={styles.Container}>
+            <Container>
                 <h1>Latest Stories</h1>
                 <div className={styles.Content}>
                     <div className={styles.LastStory} style={{ backgroundImage: `url(${story_2})` }}>
@@ -32,7 +33,7 @@ const LatestStories = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
         </div>
     )
 }

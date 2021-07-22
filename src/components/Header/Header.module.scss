@@ -1,9 +1,20 @@
+@import '../../assets/styles/mixin.scss';
+
 .Header {
     padding: 1rem;
     .Logo {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
             height: 40px;
+            margin-right: 10px;
+        }
+        h1 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.4em;
+            color: $rotary-dark-blue;
         }
     }
 }
