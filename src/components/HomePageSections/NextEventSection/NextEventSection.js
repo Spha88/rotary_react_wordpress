@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { getEvents } from '../../lib/api/events';
-import Loader from '../../UI/Loader/Loader';
 import styles from './NextEventSection.module.scss';
-import textured_bg from '../../assets/images/textured_bg.jpg';
-import ErrorLoading from '../../UI/ErrorLoading/ErrorLoading';
+import { getEvents } from '../../../lib/api/events';
+import Loader from '../../../UI/Loader/Loader';
+import textured_bg from '../../../assets/images/textured_bg.jpg';
+import ErrorLoading from '../../../UI/ErrorLoading/ErrorLoading';
 
 const NextEventSection = () => {
     const [state, setState] = useState({

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { getCauses } from '../../lib/api/causes';
-import { extractor, removeTags } from '../../lib/utils';
 import styles from './CausesSection.module.scss';
-import textured_bg from '../../assets/images/textured_bg.jpg';
-import { Container } from '../../UI/Container';
+import { getCauses } from '../../../lib/api/causes';
+import { extractor, removeTags } from '../../../lib/utils';
+import textured_bg from '../../../assets/images/textured_bg.jpg';
+import { Container } from '../../../UI/Container';
 
 
 const CausesSection = () => {

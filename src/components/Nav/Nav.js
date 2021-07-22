@@ -10,16 +10,16 @@ const Nav = () => {
                     <NavLink to="/">About Rotary</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">Get Involved</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/">Our Causes</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/">Our Programs</NavLink>
+                    <NavLink to="/causes">Our causes</NavLink>
                 </li>
                 <li>
                     <NavLink to="/">News</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/">Members</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/">Contact Us</NavLink>
                 </li>
             </ul>
         </nav>

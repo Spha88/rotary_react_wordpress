@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './JoinSection.module.scss';
-import world_bg from '../../assets/images/rotary_world_network.png'
-import { Container } from '../../UI/Container';
+import world_bg from '../../../assets/images/rotary_world_network.png'
+import { Container } from '../../../UI/Container';
 
 
 const JoinSection = () => {

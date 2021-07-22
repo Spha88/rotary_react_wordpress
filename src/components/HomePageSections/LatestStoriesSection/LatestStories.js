@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './LatestStories.module.scss';
-import { Container } from '../../UI/Container';
-import { getLatestPosts } from '../../lib/api/posts';
-import { extractor, formatDate, removeTags } from '../../lib/utils';
+import { Container } from '../../../UI/Container';
+import { getLatestPosts } from '../../../lib/api/posts';
+import { extractor, formatDate, removeTags } from '../../../lib/utils';
 
 const LatestStories = () => {
     const [state, setState] = useState({

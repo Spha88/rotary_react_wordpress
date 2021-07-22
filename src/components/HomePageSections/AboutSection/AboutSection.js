@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { getSinglePage } from '../../lib/api/pages';
-import { extractor, removeTags } from '../../lib/utils';
 import styles from './AboutSection.module.scss';
-import Loader from '../../UI/Loader/Loader';
-import Button from '../../UI/Button/Button';
-import ErrorLoading from '../../UI/ErrorLoading/ErrorLoading';
-import { Container } from '../../UI/Container';
+import { getSinglePage } from '../../../lib/api/pages';
+import { extractor, removeTags } from '../../../lib/utils';
+import Loader from '../../../UI/Loader/Loader';
+import Button from '../../../UI/Button/Button';
+import ErrorLoading from '../../../UI/ErrorLoading/ErrorLoading';
+import { Container } from '../../../UI/Container';
 
 const AboutSection = () => {
 

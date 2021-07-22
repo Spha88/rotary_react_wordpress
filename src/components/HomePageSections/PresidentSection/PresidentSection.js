@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from './PresidentSection.module.scss';
-import { Container } from '../../UI/Container';
-import { getSinglePage } from '../../lib/api/pages';
-import { extractor, removeTags } from '../../lib/utils';
-import Button from '../../UI/Button/Button';
+import { Container } from '../../../UI/Container';
+import { getSinglePage } from '../../../lib/api/pages';
+import { extractor, removeTags } from '../../../lib/utils';
+import Button from '../../../UI/Button/Button';
 
 const PresidentSection = () => {
     const [state, setState] = useState({

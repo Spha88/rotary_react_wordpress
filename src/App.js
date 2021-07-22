@@ -12,6 +12,9 @@ function App() {
         <Nav />
         <div>
           <Switch>
+            <Route path="/causes">
+              <h2>Causes page</h2>
+            </Route>
             <Route path="/">
               <Home />
             </Route>
