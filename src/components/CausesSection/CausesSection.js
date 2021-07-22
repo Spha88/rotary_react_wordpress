@@ -17,7 +17,7 @@ const CausesSection = () => {
         const fetchAboutPage = async () => {
             const causes = await getCauses();
             if (causes) {
-                setState(state => ({ ...state, loading: false, causes: causes.causes.edges }))
+                setState(state => ({ ...state, loading: false, causes: causes.causes.nodes }))
             } else {
                 setState(state => ({ ...state, loading: false, error: true }))
             }
@@ -35,11 +35,11 @@ const CausesSection = () => {
                     <p className={styles.Lead}>Rotary is dedicated to causes that build international relationships, improve lives, and create a better world to support our peace efforts and end polio forever.</p>
                     <div className={styles.Cards}>
                         {causes && causes.map(cause => (
-                            <div className={styles.Card} key={cause.node.id}>
-                                <div className={styles.CardImage} style={{ backgroundImage: `url(${cause.node.featuredImage.node.sourceUrl})` }}></div>
+                            <div className={styles.Card} key={cause.id}>
+                                <div className={styles.CardImage} style={{ backgroundImage: `url(${cause.featuredImage.node.sourceUrl})` }}></div>
                                 <div className={styles.CardBody} >
-                                    <h1>{cause.node.title}</h1>
-                                    <p dangerouslySetInnerHTML={{ __html: extractor(removeTags(cause.node.content), 25) }}></p>
+                                    <h1>{cause.title}</h1>
+                                    <p dangerouslySetInnerHTML={{ __html: extractor(removeTags(cause.content), 25) }}></p>
                                     <a href="http://" target="_blank" rel="noopener noreferrer">Learn more</a>
                                 </div>
                             </div>

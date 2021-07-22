@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAboutPage } from '../../lib/api/pages';
+import { getSinglePage } from '../../lib/api/pages';
 import { extractor, removeTags } from '../../lib/utils';
 import styles from './AboutSection.module.scss';
 import Loader from '../../UI/Loader/Loader';
@@ -17,7 +17,7 @@ const AboutSection = () => {
 
     useEffect(() => {
         const fetchAboutPage = async () => {
-            const aboutPage = await getAboutPage();
+            const aboutPage = await getSinglePage('about-page');
             if (aboutPage) {
                 setState(state => ({ ...state, loading: false, aboutPage: aboutPage.page }))
                 // console.log('We have data to work with')

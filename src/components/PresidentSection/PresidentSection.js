@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './PresidentSection.module.scss';
 import { Container } from '../../UI/Container';
-import { getPresidentPage } from '../../lib/api/pages';
+import { getSinglePage } from '../../lib/api/pages';
 import { extractor, removeTags } from '../../lib/utils';
 import Button from '../../UI/Button/Button';
 
@@ -14,8 +14,7 @@ const PresidentSection = () => {
 
     useEffect(() => {
         const fetchAboutPage = async () => {
-            const page = await getPresidentPage();
-            console.log(page.page);
+            const page = await getSinglePage('our-president');
             if (page) {
                 setState(state => ({ ...state, loading: false, page: page.page }))
                 // console.log('We have data to work with')

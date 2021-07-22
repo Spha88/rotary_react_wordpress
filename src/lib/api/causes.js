@@ -1,26 +1,25 @@
 import { fetchData } from "./api";
 
-// get all causes
+// Get last three causes
 export const getCauses = async () => {
-    const query = `
-      query MyQuery {
-          causes {
-            edges {
-              node {
-                id
-                featuredImage {
-                  node {
-                      sourceUrl
-                      altText
-                  }
-                }
-                content
-                title
-              }
+  const query = `
+    query LastThreeCauses {
+      causes(last: 3, where: {orderby: {field: DATE, order: DESC}}) {
+        nodes {
+          id
+          slug
+          featuredImage {
+            node {
+              altText
+              sourceUrl
             }
           }
+          content
+          title
         }
+      }
+    }
       `;
-    const data = await fetchData(query)
-    return data;
+  const data = await fetchData(query)
+  return data;
 }

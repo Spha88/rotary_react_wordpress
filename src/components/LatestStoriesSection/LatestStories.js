@@ -14,7 +14,6 @@ const LatestStories = () => {
     useEffect(() => {
         const fetchAboutPage = async () => {
             const latestPosts = await getLatestPosts();
-            console.log(latestPosts.posts.nodes);
             if (latestPosts) {
                 setState(state => ({ ...state, loading: false, posts: latestPosts.posts.nodes }))
                 // console.log('We have data to work with')
@@ -55,7 +54,7 @@ const LatestStories = () => {
                                 /** do not show the first post (index !== 0 ), only show the last two */
                                 posts.map((post, index) => (
                                     index !== 0 &&
-                                    <div className={styles.Story}>
+                                    <div className={styles.Story} key={post.id}>
                                         <img src={post.featuredImage.node.sourceUrl} alt="" />
                                         <div className={styles.Details}>
                                             <p className={styles.Time}>
