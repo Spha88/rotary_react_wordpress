@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './PresidentSection.module.scss';
 import { Container } from '../../UI/Container';
-import { getPresidentPage } from '../../lib/api/api';
+import { getPresidentPage } from '../../lib/api/pages';
 import { extractor, removeTags } from '../../lib/utils';
 import Button from '../../UI/Button/Button';
 
