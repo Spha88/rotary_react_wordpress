@@ -1,23 +1,23 @@
 import axios from 'axios';
 
 const fetchData = (query, variables = {}) => {
-    return axios({
-        method: 'post',
-        url: 'http://localhost/wordpress_rotary/graphql',
-        data: {
-            query: query,
-            variables: variables
-        }
-    }).then(res => {
-        return res.data.data
-    }).catch(error => {
-        return false;
-    })
+  return axios({
+    method: 'post',
+    url: 'http://localhost/wordpress_rotary/graphql',
+    data: {
+      query: query,
+      variables: variables
+    }
+  }).then(res => {
+    return res.data.data
+  }).catch(error => {
+    return false;
+  })
 }
 
 // Get single post using the slug as an id
 export const getAboutPage = async (id) => {
-    const query = `
+  const query = `
         query MyQuery {
             page(idType: URI, id: "about-page") {
                 id
@@ -32,13 +32,13 @@ export const getAboutPage = async (id) => {
         }
     `;
 
-    const data = await fetchData(query)
-    return data;
+  const data = await fetchData(query)
+  return data;
 }
 
 // Get all events
 export const getEvents = async () => {
-    const query = `
+  const query = `
         query MyQuery {
             events(where: {orderby: {field: DATE, order: DESC}}) {
             edges {
@@ -62,13 +62,13 @@ export const getEvents = async () => {
             }
         }
     `;
-    const data = await fetchData(query)
-    return data;
+  const data = await fetchData(query)
+  return data;
 }
 
 // get all causes
 export const getCauses = async () => {
-    const query = `
+  const query = `
     query MyQuery {
         causes {
           edges {
@@ -87,13 +87,13 @@ export const getCauses = async () => {
         }
       }
     `;
-    const data = await fetchData(query)
-    return data;
+  const data = await fetchData(query)
+  return data;
 }
 
 // Get latest posts
 export const getLatestPosts = async () => {
-    const query = `
+  const query = `
       query AllPosts {
         posts(first: 3, where: {orderby: {field: DATE, order: DESC}}) {
           nodes {
@@ -110,6 +110,28 @@ export const getLatestPosts = async () => {
         }
       }
     `
-    const data = await fetchData(query);
-    return data;
+  const data = await fetchData(query);
+  return data;
+}
+
+// Get president page
+export const getPresidentPage = async () => {
+  const query = `
+    query GetPresidentPage {
+      page(id: "our-president", idType: URI) {
+        extraDetails {
+          presidentName
+        }
+        content
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  `
+  const data = await fetchData(query);
+  return data;
 }

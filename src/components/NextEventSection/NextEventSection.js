@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getEvents } from '../../lib/api';
+import { getEvents } from '../../lib/api/api';
 import Loader from '../../UI/Loader/Loader';
 import styles from './NextEventSection.module.scss';
 import textured_bg from '../../assets/images/textured_bg.jpg';

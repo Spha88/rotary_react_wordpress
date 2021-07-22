@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getCauses } from '../../lib/api';
+import { getCauses } from '../../lib/api/api';
 import { extractor, removeTags } from '../../lib/utils';
 import styles from './CausesSection.module.scss';
 import textured_bg from '../../assets/images/textured_bg.jpg';

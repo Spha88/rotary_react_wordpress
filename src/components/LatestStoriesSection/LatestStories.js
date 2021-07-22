@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './LatestStories.module.scss';
 import { Container } from '../../UI/Container';
-import { getLatestPosts } from '../../lib/api';
+import { getLatestPosts } from '../../lib/api/api';
 import { extractor, formatDate, removeTags } from '../../lib/utils';
 
 const LatestStories = () => {

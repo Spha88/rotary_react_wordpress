@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAboutPage } from '../../lib/api';
+import { getAboutPage } from '../../lib/api/api';
 import { extractor, removeTags } from '../../lib/utils';
 import styles from './AboutSection.module.scss';
 import Loader from '../../UI/Loader/Loader';

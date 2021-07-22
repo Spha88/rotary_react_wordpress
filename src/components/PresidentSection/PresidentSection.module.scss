@@ -1,0 +1,27 @@
+@import '../../assets/styles/mixin.scss';
+
+.President {
+    padding: 5rem 0;
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: normal;
+        color: $rotary-dark-blue;
+        margin: 0 0 3rem;
+    }
+    .Content {
+        display: flex;
+        img {
+            width: 30%;
+        }
+        .ContentDetails {
+            padding-left: 3rem;
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 600px;
+            .Message {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
