@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './CausesSection.module.scss';
 import { getCauses } from '../../../lib/api/causes';
 import { extractor, removeTags } from '../../../lib/utils';
@@ -41,7 +42,7 @@ const CausesSection = () => {
                                 <div className={styles.CardBody} >
                                     <h1>{cause.title}</h1>
                                     <p dangerouslySetInnerHTML={{ __html: extractor(removeTags(cause.content), 25) }}></p>
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Learn more</a>
+                                    <Link to={`/causes/${cause.slug}`} rel="noopener noreferrer">Learn more</Link>
                                 </div>
                             </div>
                         ))}
