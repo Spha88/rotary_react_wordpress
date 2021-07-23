@@ -1,0 +1,51 @@
+@import '../../../assets/styles/mixin.scss';
+
+.Causes {
+    padding: 2rem 0 5rem 0;
+    .Cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .Card {
+            width: 32%;
+            margin-bottom: 2rem;
+            background-color: $white;
+            @include box-shadow-hover;
+            .CardImage {
+                width: 100%;
+                height: 300px !important;
+                position: relative;
+                background: {
+                    size: cover;
+                    position: center center;
+                }
+                
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border: $rotary-yellow 1px solid;
+                    left: 0;
+                    top: 0;
+                    transform: translate(5%, 5%);
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+            .CardBody {
+                padding: 1rem 1.5rem 2rem;
+                text-align: center;
+                h1 { font-size: 1.1rem }
+                a {
+                    display: inline-block;
+                    color: $rotary-sky-blue;
+                    font-weight:  500;
+                    transition: color 200ms linear;
+                    &:hover {
+                        color: $rotary-dark-blue;
+                    }
+                }
+            }
+        }
+    }
+}
