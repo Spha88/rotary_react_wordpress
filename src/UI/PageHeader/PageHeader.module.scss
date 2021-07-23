@@ -1,0 +1,16 @@
+.PageHeader {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: {
+        size: cover;
+        position: center center;
+        repeat: no-repeat;
+    }
+    h1 {
+        font-size: 4rem;
+        color: #fff;
+        text-shadow: 2px 3px 8px #000;
+    }
+}

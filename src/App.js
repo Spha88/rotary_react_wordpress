@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styles from './App.module.scss';
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
+import Causes from './pages/Causes/Causes';
 import Home from './pages/Home/Home';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <div>
           <Switch>
             <Route path="/causes">
-              <h2>Causes page</h2>
+              <Causes />
             </Route>
             <Route path="/">
               <Home />
