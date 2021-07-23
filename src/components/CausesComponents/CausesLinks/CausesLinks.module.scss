@@ -1,0 +1,39 @@
+@import '../../../assets/styles/mixin.scss';
+
+.CausesLinks {
+    h2 {
+        margin-top: 0;
+        color: $rotary-dark-blue;
+    }
+    ul {
+        padding: 0;
+        li {
+            list-style-type: none;
+            margin-bottom: 1rem;
+            a {
+                display: flex;
+                align-items: center;
+                background-color: $grey;
+                &.Active {
+                    box-shadow: 3px 4px 7px $black;
+                }
+                .BackgroundImg {
+                    width: 40%;
+                    height: 90px;
+                    background: {
+                        size: cover;
+                        position: center center;
+                    }
+                }
+                img {
+                    width: 50%;
+                    display: none;
+                }
+                h4 {
+                    width: 60%;
+                    padding: 0 0 0 1rem;
+                }
+            }
+        }
+    }
+}

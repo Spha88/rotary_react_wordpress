@@ -1,5 +1,33 @@
 import { fetchData } from "./api";
 
+// Get single cause
+export const getSingleCause = async (slug) => {
+  const query = `
+    query CauseBySlug($id: ID!, $idType: CauseIdType!) {
+      cause(idType: $idType, id: $id) {
+        content
+        id
+        slug
+        title
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  `;
+
+  const variables = {
+    id: slug,
+    idType: "URI"
+  }
+
+  const data = await fetchData(query, variables);
+  return data;
+}
+
 // Get last three causes
 export const getCauses = async () => {
   const query = `
@@ -23,8 +51,30 @@ export const getCauses = async () => {
   const data = await fetchData(query)
   return data;
 }
+// get last 5 causes
+export const getLastFiveCauses = async () => {
+  const query = `
+    query LastFiveCauses {
+      causes(where: {orderby: {field: DATE, order: DESC}}, first: 5) {
+        nodes {
+          id
+          slug
+          featuredImage {
+            node {
+              altText
+              sourceUrl
+            }
+          }
+          title
+        }
+      }
+    }
+  `;
+  const data = await fetchData(query)
+  return data;
+}
 
-// Get last three causes
+// Get all causes
 export const getAllCauses = async () => {
   const query = `
     query AllCauses {

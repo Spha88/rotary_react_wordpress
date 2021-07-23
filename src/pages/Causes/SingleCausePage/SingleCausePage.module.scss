@@ -1,0 +1,27 @@
+.SingleCausePage {
+    .PageLayout {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5rem;
+        .ArticleContainer {
+            width: 60%;
+            article {
+                img {
+                    width: 100%;
+                    display: none;
+                }
+                .FeaturedImage {
+                    height: 450px;
+                    transition: all 400ms linear 400ms;
+                    background: {
+                        size: cover;
+                        position: center center
+                    }
+                }
+            }
+        }
+        aside {
+            width: 38%;
+        }
+    }
+}

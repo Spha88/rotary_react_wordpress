@@ -3,6 +3,7 @@ import styles from './App.module.scss';
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
 import CausesPage from './pages/Causes/CausesPage';
+import SingleCausePage from './pages/Causes/SingleCausePage/SingleCausePage';
 import Home from './pages/Home/Home';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <div>
           <Switch>
             <Route path="/causes/:slug">
-              <h2>Single page</h2>
+              <SingleCausePage />
             </Route>
             <Route path="/causes">
               <CausesPage />

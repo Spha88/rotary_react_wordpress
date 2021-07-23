@@ -29,8 +29,6 @@ const CausesPage = () => {
 
     const { loading, error, causes } = state;
 
-    console.log(causes);
-
     return (
         <div className={styles.Causes} style={{ backgroundImage: `url(${textured_bg})` }}>
             <PageHeader label="Causes" />
