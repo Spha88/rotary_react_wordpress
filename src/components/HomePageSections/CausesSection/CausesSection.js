@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './CausesSection.module.scss';
+import { Link } from 'react-router-dom';
 import { getCauses } from '../../../lib/api/causes';
 import { extractor, removeTags } from '../../../lib/utils';
 import textured_bg from '../../../assets/images/textured_bg.jpg';
@@ -45,6 +46,8 @@ const CausesSection = () => {
                             </div>
                         ))}
                     </div>
+
+                    <Link to="/causes" className={styles.ViewAllButton}>View all</Link>
                 </Container>
             }
         </div>

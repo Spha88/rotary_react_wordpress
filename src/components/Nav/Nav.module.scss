@@ -44,6 +44,12 @@
                     left: 0;
                 }
             }
-        }
+            &.Active {
+                color: $rotary-sky-blue;
+                    &::after {
+                        left: 0;
+                    }
+            }
+        }   
     }
 }

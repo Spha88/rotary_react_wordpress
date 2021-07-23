@@ -7,19 +7,19 @@ const Nav = () => {
         <nav className={styles.Nav}>
             <ul>
                 <li>
-                    <NavLink to="/">About Rotary</NavLink>
+                    <NavLink to="/" activeClassName={styles.Active} exact>About Rotary</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/causes">Our causes</NavLink>
+                    <NavLink to="/causes" activeClassName={styles.Active} exact>Our causes</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">News</NavLink>
+                    <NavLink to="/news" activeClassName={styles.Active} exact>News</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">Members</NavLink>
+                    <NavLink to="/Members" activeClassName={styles.Active} exact>Members</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">Contact Us</NavLink>
+                    <NavLink to="/contact-us" activeClassName={styles.Active} exact>Contact Us</NavLink>
                 </li>
             </ul>
         </nav>
