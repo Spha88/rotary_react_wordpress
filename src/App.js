@@ -5,6 +5,7 @@ import Nav from './components/Nav/Nav';
 import CausesPage from './pages/Causes/CausesPage';
 import SingleCausePage from './pages/Causes/SingleCausePage/SingleCausePage';
 import Home from './pages/Home/Home';
+import News from './pages/News/News';
 
 function App() {
   return (
@@ -14,6 +15,12 @@ function App() {
         <Nav />
         <div>
           <Switch>
+            <Route path="/news/:slug">
+              <h2>News single page</h2>
+            </Route>
+            <Route path="/news">
+              <News />
+            </Route>
             <Route path="/causes/:slug">
               <SingleCausePage />
             </Route>

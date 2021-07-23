@@ -1,0 +1,41 @@
+@import '../../assets/styles/mixin.scss';
+
+.News {
+    .NewsLayout {
+        display: flex;
+        .Articles {
+            width: 70%;
+            article {
+                display: flex;
+                margin-bottom: 1rem;
+                background-color: $white;
+                .ArticleFeaturedImage {
+                    width: 40%;
+                    height: 300px;
+                    background: {
+                        size: cover;
+                        position: center center;
+                        repeat: no-repeat;
+                    }
+                }
+                .ArticleContent {
+                    width: 60%;
+                    padding: 1rem 1rem 1rem 2rem;
+                    p {
+                        margin-top: .5rem;
+                        font-size: 0.9em;
+                    }
+                    h3 {
+                        margin-top: 0;
+                    }
+                    div {
+                        margin-bottom: 1rem;
+                    }
+                    a {
+                        color: $rotary-sky-blue;
+                    }
+                }
+            }
+        }
+    }
+}

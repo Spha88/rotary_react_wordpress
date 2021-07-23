@@ -54,3 +54,28 @@ export const getSinglePost = async (id) => {
   const data = await fetchData(query, variables)
   return data.post;
 }
+
+// Get all posts
+export const getAllPosts = async () => {
+  const query = `
+    query AllPosts {
+      posts {
+        nodes {
+          excerpt
+          id
+          title
+          date
+          slug
+          featuredImage {
+            node {
+              sourceUrl
+              altText
+            }
+          }
+        }
+      }
+    }
+  `
+  const data = await fetchData(query);
+  return data;
+}

@@ -25,5 +25,5 @@ export const extractor = (str, number = 15) => {
 
 // Format date from wordpress
 export const formatDate = date => {
-    return moment(date).format("D MMM YYYY")
+    return moment(date).format("D MMMM YYYY")
 }
