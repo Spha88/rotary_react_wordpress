@@ -1,6 +1,9 @@
 @import '../../../assets/styles/mixin.scss';
 
 .CausesLinks {
+    padding: 1rem;
+    border-bottom: 1px solid $border-grey;
+    margin-bottom: 2rem;
     h2 {
         margin-top: 0;
         color: $rotary-dark-blue;

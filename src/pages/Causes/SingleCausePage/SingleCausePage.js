@@ -7,6 +7,7 @@ import { Container } from '../../../UI/Container';
 import Loader from '../../../UI/Loader/Loader';
 import ErrorLoading from '../../../UI/ErrorLoading/ErrorLoading';
 import CausesLinks from '../../../components/CausesComponents/CausesLinks/CausesLinks';
+import ImportantLinks from '../../../components/ImportantLinks/ImportantLinks';
 
 const SingleCausePage = () => {
     const { slug } = useParams();
@@ -59,6 +60,7 @@ const SingleCausePage = () => {
                     </div>
                     <aside>
                         <CausesLinks />
+                        <ImportantLinks />
                     </aside>
                 </div>
             </Container>

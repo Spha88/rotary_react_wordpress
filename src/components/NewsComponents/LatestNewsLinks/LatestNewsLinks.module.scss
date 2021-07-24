@@ -1,0 +1,45 @@
+@import '../../../assets/styles/mixin.scss';
+
+.LatestNewsLinks {
+    padding: 1rem;
+    width: 100%;
+    color: $rotary-dark-blue;
+    h2 {
+        
+        margin-top: 0;
+    }
+    ul {
+        padding: 0;
+        li {
+            list-style-type: none;
+            .Link {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 1rem;
+                img {
+                    width: 40%;
+                    height: 90px;
+                    object-fit: cover;
+                }
+                .LinkDetails {
+                    width: 60%;
+                    padding-left: 1rem;
+                    p { 
+                        margin: 0; 
+                        font-size: .9em;
+                        font-style: italic;
+                    }
+                    h2 {
+                        font-size: 1rem;
+                        margin: 0;
+                        font-weight: bold;
+                        font-family: $body-font;
+                    }
+                }
+            }
+            
+        }
+    }
+
+}

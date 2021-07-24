@@ -6,6 +6,8 @@ import { Container } from '../../../UI/Container';
 import styles from './NewsSinglePage.module.scss';
 import { formatDate } from '../../../lib/utils';
 import CausesLinks from '../../../components/CausesComponents/CausesLinks/CausesLinks';
+import ImportantLinks from '../../../components/ImportantLinks/ImportantLinks';
+import LatestNewsLinks from '../../../components/NewsComponents/LatestNewsLinks/LatestNewsLinks';
 
 const NewsSinglePage = () => {
     const { slug } = useParams();
@@ -27,8 +29,6 @@ const NewsSinglePage = () => {
     }, [slug])
 
     const { loading, error, post } = state;
-
-    console.log(post && post)
 
     return (
         <div className={styles.NewsSinglePage}>
@@ -56,7 +56,9 @@ const NewsSinglePage = () => {
                         </article>
                     }
                     <aside>
+                        <LatestNewsLinks />
                         <CausesLinks />
+                        <ImportantLinks />
                     </aside>
                 </div>
             </Container>

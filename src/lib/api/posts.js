@@ -24,6 +24,30 @@ export const getLatestPosts = async () => {
   return data;
 }
 
+// Get latest posts
+export const getLastFivePosts = async () => {
+  const query = `
+        query LastFivePosts {
+          posts(first: 5, where: {orderby: {field: DATE, order: DESC}}) {
+            nodes {
+              id
+              slug
+              date
+              title
+              content
+              featuredImage {
+                node {
+                  sourceUrl(size: MEDIUM_LARGE)
+                }
+              }
+            }
+          }
+        }
+      `
+  const data = await fetchData(query);
+  return data;
+}
+
 // Get single post using the slug as an id
 export const getSinglePost = async (id) => {
   const query = `

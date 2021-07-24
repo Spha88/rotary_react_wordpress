@@ -8,6 +8,7 @@ import PageHeader from '../../UI/PageHeader/PageHeader'
 import { extractor, formatDate, removeTags } from '../../lib/utils';
 import textured_bg from '../../assets/images/textured_bg.jpg';
 import ImportantLinks from '../../components/ImportantLinks/ImportantLinks';
+import CausesLinks from '../../components/CausesComponents/CausesLinks/CausesLinks';
 
 const News = () => {
     const [state, setState] = useState({

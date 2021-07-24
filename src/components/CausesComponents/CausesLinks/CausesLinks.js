@@ -33,7 +33,7 @@ const CausesLinks = () => {
 
             {!loading && !error &&
                 <>
-                    <h2>Other Causes</h2>
+                    <h2>Causes</h2>
                     <ul>
                         {causes && causes.map(cause => (
                             <li key={cause.id}>
