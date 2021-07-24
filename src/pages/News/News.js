@@ -7,6 +7,7 @@ import LeadParagraph from '../../UI/LeadParagraph/LeadParagraph'
 import PageHeader from '../../UI/PageHeader/PageHeader'
 import { extractor, formatDate, removeTags } from '../../lib/utils';
 import textured_bg from '../../assets/images/textured_bg.jpg';
+import ImportantLinks from '../../components/ImportantLinks/ImportantLinks';
 
 const News = () => {
     const [state, setState] = useState({
@@ -56,7 +57,7 @@ const News = () => {
                         }
                     </div>
                     <aside>
-
+                        <ImportantLinks />
                     </aside>
                 </div>
             </Container>

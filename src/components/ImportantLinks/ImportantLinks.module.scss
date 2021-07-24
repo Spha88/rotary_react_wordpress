@@ -1,0 +1,28 @@
+@import '../../assets/styles/mixin.scss';
+
+.ImportantLinks {
+    padding: 1rem 2rem 0;
+    width: 100%;
+    h2 {
+        color: $rotary-sky-blue;
+        margin-top: 0;
+    }
+    .Links {
+        a {
+            display: block;
+            padding: 20px 60px;
+            text-align: center;
+            border: 1px solid $rotary-sky-blue;
+            margin-bottom: 1rem;
+            color: $white;
+            background-color: $rotary-dark-blue;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 300ms linear;
+            &:hover {
+                background-color: $white;
+                color: $rotary-dark-blue;
+            }
+        }
+    }
+}
