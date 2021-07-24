@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './LatestStories.module.scss';
 import { Container } from '../../../UI/Container';
 import { getLatestPosts } from '../../../lib/api/posts';
@@ -45,7 +46,7 @@ const LatestStories = () => {
                                     </svg>
                                     {formatDate(posts[0].date)}
                                 </p>
-                                <a href="http://" target="_blank" rel="noopener noreferrer">Read More</a>
+                                <Link to={`/news/${posts[0].slug}`} rel="noopener noreferrer" >Read more</Link>
                             </div>
                         </div>
 
@@ -65,6 +66,7 @@ const LatestStories = () => {
                                             </p>
                                             <h3>{post.title}</h3>
                                             <div dangerouslySetInnerHTML={{ __html: extractor(removeTags(post.content)) }} />
+                                            <Link to={`/news/${post.slug}`}>Read more</Link>
                                         </div>
                                     </div>
                                 ))

@@ -6,6 +6,7 @@ import CausesPage from './pages/Causes/CausesPage';
 import SingleCausePage from './pages/Causes/SingleCausePage/SingleCausePage';
 import Home from './pages/Home/Home';
 import News from './pages/News/News';
+import NewsSinglePage from './pages/News/NewsSinglePage/NewsSinglePage';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <div>
           <Switch>
             <Route path="/news/:slug">
-              <h2>News single page</h2>
+              <NewsSinglePage />
             </Route>
             <Route path="/news">
               <News />

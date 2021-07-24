@@ -43,6 +43,12 @@ export const getSinglePost = async (id) => {
       post(id: $id, idType: $idType) {
         ...PostFields
         content
+        author {
+          node {
+            lastName
+            firstName
+          }
+        }
       }
     }
   `;

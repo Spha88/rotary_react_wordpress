@@ -15,7 +15,7 @@
             display: flex;
             align-items: flex-end;
             width: 50%;
-            padding: 1em 1em 3em;
+            padding: 01rem 2rem 3rem 2rem;
             @include box-shadow-hover;
             background : {
                 size: cover;
@@ -25,7 +25,7 @@
             .LastStoryContent {
                 text-shadow: 2px 3px 5px #000;
                 h1 {
-                    color: $white;
+                    color: $rotary-yellow;
                 }
                 .LastPostDate {
                     display: flex;
@@ -38,6 +38,10 @@
                 }
                 a {
                     color: $white;
+                    display: inline-block;
+                    padding: 15px 50px;
+                    border: 2px solid $purple; 
+                    background: rgba(0,0,0, .5);
                 }
             }
         }
@@ -52,10 +56,16 @@
                 }
                 img {
                     width: 50%;
+                    height: 300px;
+                    object-fit: cover;
                 }
                 .Details {
                     padding: 1rem;
                     width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
                     .Time {
                         display: flex;
                         align-items: center;
@@ -66,6 +76,14 @@
                             margin-right: 5px;
                             stroke: $rotary-dark-blue;
                         }
+                    }
+                    div {font-size: .9em;}
+                    a {
+                        display: inline-block;
+                        margin-top: 1rem;
+                        font-size: .9em;
+                        font-weight: bold;
+                        color: $rotary-sky-blue ;
                     }
                 }
             }
