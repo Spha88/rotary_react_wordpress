@@ -5,6 +5,7 @@ import Nav from './components/Nav/Nav';
 import CausesPage from './pages/Causes/CausesPage';
 import SingleCausePage from './pages/Causes/SingleCausePage/SingleCausePage';
 import Events from './pages/Events/EventsPage';
+import SingleEventPage from './pages/Events/SingleEventPage/SingleEventPage';
 import Home from './pages/Home/Home';
 import News from './pages/News/News';
 import NewsSinglePage from './pages/News/NewsSinglePage/NewsSinglePage';
@@ -17,6 +18,9 @@ function App() {
         <Nav />
         <div>
           <Switch>
+            <Route path="/events/:slug">
+              <SingleEventPage />
+            </Route>
             <Route path="/events">
               <Events />
             </Route>

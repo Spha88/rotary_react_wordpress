@@ -1,7 +1,7 @@
 @import '../../../assets/styles/mixin.scss';
 
 .NextEventSection {
-    padding: 5rem 0 5rem 0;
+    padding: 2rem 0 2rem 0;
     .ContentContainer {
         background-position: center center;
         background-size: 100% auto;
@@ -12,10 +12,25 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgb(2,0,36);
+            background: linear-gradient(45deg, rgba(5, 1, 90, 0.844) 0%, rgba(9,9,121,0.20772058823529416) 45%, rgba(2,0,36,0) 100%);
+            z-index: 0;
+
+        }
         .EventDetails {
             width: 70%;
             padding: 2rem 5rem 0 4rem;
             color: $white;
+            z-index: 1;
             h5 {
                 font-family: $body-font !important;
                 font-weight: normal;
@@ -30,6 +45,7 @@
             padding: 3rem 2rem;
             width: 30%;
             height: 100%;
+            z-index: 2;
             h3 {
                 color: $rotary-dark-blue;
                 font-size: 1.6rem;

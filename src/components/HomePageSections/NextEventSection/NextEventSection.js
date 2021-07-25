@@ -5,7 +5,8 @@ import Loader from '../../../UI/Loader/Loader';
 import textured_bg from '../../../assets/images/textured_bg.jpg';
 import ErrorLoading from '../../../UI/ErrorLoading/ErrorLoading';
 
-const NextEventSection = () => {
+const NextEventSection = ({ singleEvent }) => {
+
     const [state, setState] = useState({
         loading: true,
         errorLoading: false,
@@ -13,10 +14,14 @@ const NextEventSection = () => {
     })
 
     useEffect(() => {
+
         const fetchEvents = async () => {
+
             const events = await getEvents();
 
-            if (events) {
+            if (singleEvent) {
+                setState(state => ({ ...state, loading: false, event: singleEvent }))
+            } else if (events) {
                 //Bring the event date to the first level of the object and format it to a new date
                 const modifiedEvents = events.events.nodes.map(event => {
                     return { ...event, dateAndTime: new Date(event.eventDetails.dateAndTime) }
@@ -39,7 +44,7 @@ const NextEventSection = () => {
 
         fetchEvents();
 
-    }, [])
+    }, [singleEvent])
 
 
     const { loading, error, event } = state;
@@ -47,16 +52,17 @@ const NextEventSection = () => {
 
 
     return (
-        <div className={styles.NextEventSection}
-            style={{ backgroundImage: `url(${textured_bg})` }}
-        >
+        <div className={styles.NextEventSection}>
             {!loading && !error &&
                 <div className={styles.ContentContainer}
                     style={{ backgroundImage: `url(${event.eventDetails.backgroundImage.sourceUrl})` }}
                 >
 
                     <div className={styles.EventDetails}>
-                        <h5>Next Event</h5>
+
+                        {   /** Only show the words "Next Event" if you are not on single event page */
+                            !singleEvent && <h5>Next Event</h5>}
+
                         <h1>{event.title}</h1>
                         {event.eventDetails.host &&
                             <h3>By {event.eventDetails.host}</h3>
