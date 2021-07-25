@@ -15,8 +15,23 @@ const NextEventSection = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             const events = await getEvents();
+
             if (events) {
-                setState(state => ({ ...state, loading: false, event: events.events.edges[0].node }))
+                //Bring the event date to the first level of the object and format it to a new date
+                const modifiedEvents = events.events.nodes.map(event => {
+                    return { ...event, dateAndTime: new Date(event.eventDetails.dateAndTime) }
+                })
+
+                // Sort the array using the dateAndTime property of the object
+                // Sort: smaller date first (chronological order)
+                const sortedArray = modifiedEvents.sort((a, b) => a.dateAndTime - b.dateAndTime);
+
+                // Filter out all events that have already passed, that is dates smaller than today;
+                const nextEvents = sortedArray.filter(event => event.dateAndTime > new Date());
+
+                // The first event is the the event the represents the next event
+                setState(state => ({ ...state, loading: false, event: nextEvents[0] }))
+
             } else {
                 setState(state => ({ ...state, loading: false, error: true }))
             }
@@ -26,7 +41,10 @@ const NextEventSection = () => {
 
     }, [])
 
+
     const { loading, error, event } = state;
+
+
 
     return (
         <div className={styles.NextEventSection}

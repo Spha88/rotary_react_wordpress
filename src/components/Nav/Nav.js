@@ -13,6 +13,9 @@ const Nav = () => {
                     <NavLink to="/causes" activeClassName={styles.Active} >Our causes</NavLink>
                 </li>
                 <li>
+                    <NavLink to="/events" activeClassName={styles.Active} >Events</NavLink>
+                </li>
+                <li>
                     <NavLink to="/news" activeClassName={styles.Active} >News</NavLink>
                 </li>
                 <li>
