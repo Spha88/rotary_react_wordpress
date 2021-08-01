@@ -51,9 +51,18 @@
                 font-size: 1.6rem;
             }
             .Time {
+                display: flex;
+                align-items: center;
                 font-size: .9em;
                 font-weight: bold;
                 color: $rotary-dark-blue;
+                span {
+                    margin-right: 10px;
+                }
+                svg {
+                    width: 18px;
+                    margin-right: 5px;
+                }
             }
             .AddToCalender {
                 color: $rotary-dark-blue;

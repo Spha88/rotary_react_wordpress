@@ -24,6 +24,10 @@ export const extractor = (str, number = 15) => {
 };
 
 // Format date from wordpress
-export const formatDate = date => {
-    return moment(date).format("D MMMM YYYY")
+export const formatDate = (date, displayTime = false) => {
+    if (displayTime) {
+        return moment(date).format("HH:mm")
+    } else {
+        return moment(date).format("D MMMM YYYY")
+    }
 }
