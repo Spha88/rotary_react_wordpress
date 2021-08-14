@@ -1,0 +1,20 @@
+.MemberPage {
+    padding: 3rem 0;
+    display: flex;
+    .Content {
+        width: 100%;
+        .MemberHeader {
+            display: flex;
+            .MemberImage {
+                width: 40%;
+                img {
+                    width: 100%;
+                }
+            }
+            .MemberDetails {
+                width: 60%;
+                padding: 0 2rem;
+            }
+        }
+    }
+}
