@@ -3,8 +3,9 @@ import PageHeader from '../../UI/PageHeader/PageHeader';
 import styles from './MembersPage.module.scss';
 import bg_image from '../../assets/images/members.jpg';
 import { getMembers } from '../../lib/api/members';
-import { Container } from '../../UI/Container';
 import Members from '../../components/MembersComponents/Members/Members';
+import Loader from '../../UI/Loader/Loader';
+import ErrorLoading from '../../UI/ErrorLoading/ErrorLoading';
 
 const MembersPage = () => {
     const [state, setState] = useState({
@@ -27,12 +28,16 @@ const MembersPage = () => {
     }, [])
 
     const { loading, error, members } = state;
+
     return (
         <div className={styles.Members}>
             <PageHeader label="Members" backgroundImage={bg_image} />
-            <Container>
-                {members && <Members members={members} />}
-            </Container>
+
+            {!loading && !error && <Members members={members} />}
+
+            {loading && <Loader />}
+
+            {error && <ErrorLoading />}
         </div>
     )
 }

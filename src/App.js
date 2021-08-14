@@ -7,6 +7,7 @@ import SingleCausePage from './pages/Causes/SingleCausePage/SingleCausePage';
 import Events from './pages/Events/EventsPage';
 import SingleEventPage from './pages/Events/SingleEventPage/SingleEventPage';
 import Home from './pages/Home/Home';
+import MemberSinglePage from './pages/Members/MemberSinglePage/MemberSinglePage';
 import MembersPage from './pages/Members/MembersPage';
 import News from './pages/News/News';
 import NewsSinglePage from './pages/News/NewsSinglePage/NewsSinglePage';
@@ -19,30 +20,21 @@ function App() {
         <Nav />
         <div>
           <Switch>
-            <Route path="/members">
-              <MembersPage />
-            </Route>
-            <Route path="/events/:slug">
-              <SingleEventPage />
-            </Route>
-            <Route path="/events">
-              <Events />
-            </Route>
-            <Route path="/news/:slug">
-              <NewsSinglePage />
-            </Route>
-            <Route path="/news">
-              <News />
-            </Route>
-            <Route path="/causes/:slug">
-              <SingleCausePage />
-            </Route>
-            <Route path="/causes">
-              <CausesPage />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+
+            <Route path="/members/:slug" component={MemberSinglePage} />
+            <Route path="/members" component={MembersPage} />
+
+            <Route path="/events/:slug" component={SingleEventPage} />
+            <Route path="/events" component={Events} />
+
+            <Route path="/news/:slug" component={NewsSinglePage} />
+            <Route path="/news" component={News} />
+
+            <Route path="/causes/:slug" component={SingleCausePage} />
+            <Route path="/causes" component={CausesPage} />
+
+            <Route path="/" component={Home} />
+
           </Switch>
         </div>
       </div>
