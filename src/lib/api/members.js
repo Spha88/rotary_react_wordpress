@@ -2,11 +2,12 @@ import { fetchData } from "./api";
 
 // Get all events
 export const getMembers = async () => {
-    const query = `
+  const query = `
     query MyQuery {
         members {
           nodes {
             id
+            slug
             memberDetails {
               names
               surname
@@ -22,6 +23,6 @@ export const getMembers = async () => {
         }
       }
       `;
-    const data = await fetchData(query)
-    return data;
+  const data = await fetchData(query)
+  return data;
 }
