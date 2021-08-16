@@ -53,8 +53,7 @@ const News = () => {
                                     <Link to={`/news/${post.slug}`}>Read more</Link>
                                 </div>
                             </article>
-                        ))
-                        }
+                        ))}
                     </div>
                     <aside>
                         <ImportantLinks />
