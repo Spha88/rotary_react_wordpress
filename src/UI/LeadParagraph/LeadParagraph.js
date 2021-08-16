@@ -1,24 +1,41 @@
-import React from 'react';
-const styles = {
-    maxWidth: '700px',
-    margin: '0 auto',
-    padding: '2rem 1rem',
-    fontWeight: '400',
-    fontSize: '1.6rem',
-    lineHeight: 10,
-    textAlign: 'center',
-}
+import React, { useEffect, useState } from 'react';
 
-const pStyles = {
-    lineHeight: '1.3'
-}
+export const LeadParagraph = ({ content }) => {
 
-const LeadParagraph = ({ content }) => {
+    const mediaMatch = window.matchMedia('(max-width: 425px');
+
+    // Set initial match to initial state
+    const [matches, setMatches] = useState(mediaMatch.matches);
+
+    useEffect(() => {
+        // add lister to the match when the component was been loaded / mounted. 
+        const handler = e => setMatches(e.matches);
+        mediaMatch.addEventListener("change", handler);
+
+        // remove the listener when component unloads (unmount)
+        return () => mediaMatch.removeEventListener("change", handler);
+    })
+
     return (
-        <div style={styles}>
+        <div style={styles.container(matches)}>
             <p style={pStyles}>{content}</p>
         </div>
     )
 }
 
-export default LeadParagraph
+const styles = {
+    container: isMobile => ({
+        maxWidth: '700px',
+        margin: '0 auto',
+        // set styles according to the match
+        padding: isMobile ? '1rem 2rem' : '2rem 1rem',
+        fontSize: isMobile ? '1.1rem' : '1.6rem',
+        fontWeight: '400',
+        lineHeight: 10,
+        textAlign: 'center',
+    })
+}
+
+const pStyles = {
+    lineHeight: '1.3'
+}

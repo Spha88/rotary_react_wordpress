@@ -11,6 +11,13 @@
             margin-bottom: 2rem;
             background-color: $white;
             @include box-shadow-hover;
+            @include media($tablet) {
+                width: 49%;
+                margin-bottom: 1rem;
+            }
+            @include media($mobile) {
+                width: 100%;
+            }
             .CardImage {
                 width: 100%;
                 height: 300px !important;
