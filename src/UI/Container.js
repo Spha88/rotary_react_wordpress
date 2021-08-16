@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 export const Container = ({ children }) => {
 
     const matchMedia = window.matchMedia('(max-width: 1024px)');
-    console.log(matchMedia);
 
     const [matches, setMatch] = useState(matchMedia.matches)
 

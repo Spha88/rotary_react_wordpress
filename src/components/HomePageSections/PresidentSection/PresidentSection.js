@@ -6,27 +6,42 @@ import { extractor, removeTags } from '../../../lib/utils';
 import Button from '../../../UI/Button/Button';
 
 const PresidentSection = () => {
+
+    const mediaMatch = window.matchMedia('(max-width: 768px)')
+
     const [state, setState] = useState({
         loading: true,
         error: false,
-        page: []
+        page: [],
+
+        // for the length of the extract
+        numberOfWords: mediaMatch.matches ? 50 : 90,
     })
 
     useEffect(() => {
+        // Check the size of the screen. 
+
+        const handler = e => setState(state => ({ ...state, numberOfWords: e.matches ? 50 : 90 }))
+        mediaMatch.addEventListener('change', handler);
+
         const fetchAboutPage = async () => {
             const page = await getSinglePage('our-president');
             if (page) {
                 setState(state => ({ ...state, loading: false, page: page.page }))
-                // console.log('We have data to work with')
             } else {
                 setState(state => ({ ...state, loading: false, error: true }))
-                // console.log('No data was returned')
             }
         }
+
         fetchAboutPage();
+
+        console.log("Reloaded")
+
+        return () => mediaMatch.removeEventListener('change', handler);
+
     }, [])
 
-    const { page, loading, error } = state;
+    const { page, loading, error, numberOfWords } = state;
 
     return (
         <div className={styles.President}>
@@ -37,7 +52,7 @@ const PresidentSection = () => {
                         <img src={page.featuredImage.node.sourceUrl} alt={page.featuredImage.node.altText} />
                         <div className={styles.ContentDetails}>
                             <h3>{page.extraDetails.presidentName}</h3>
-                            <div className={styles.Message} dangerouslySetInnerHTML={{ __html: extractor(removeTags(page.content), 90) }} />
+                            <div className={styles.Message} dangerouslySetInnerHTML={{ __html: extractor(removeTags(page.content), numberOfWords) }} />
                             <Button label="Read More" />
                         </div>
                     </div>
