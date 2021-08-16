@@ -14,10 +14,6 @@ const Events = ({ events }) => {
     // Sort the array using the dateAndTime property of the object
     const sortedArray = modifiedEvents.sort((a, b) => a.dateAndTime - b.dateAndTime);
 
-    const date = new Date();
-
-    const futureEvents = sortedArray.filter(event => event.dateAndTime > date);
-
     return (
         <div className={styles.Events}>
             <Container>
