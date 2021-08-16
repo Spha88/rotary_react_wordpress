@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getAllCauses } from '../../lib/api/causes';
-import { LeadParagraph } from '../../UI/LeadParagraph/LeadParagraph';
+import { LeadParagraph } from '../../UI/LeadParagraph';
 import PageHeader from '../../UI/PageHeader/PageHeader';
 import styles from './CausesPage.module.scss';
 import Causes from '../../components/CausesComponents/Causes/Causes';
