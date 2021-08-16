@@ -64,11 +64,12 @@ const NextEventSection = ({ singleEvent }) => {
                             !singleEvent && <h5>Next Event</h5>}
 
                         <h1>{event.title}</h1>
-                        {event.eventDetails.host &&
-                            <h3>By {event.eventDetails.host}</h3>
-                        }
+
+                        {event.eventDetails.host && <h3>By {event.eventDetails.host}</h3>}
+
                         <p dangerouslySetInnerHTML={{ __html: event.eventDetails.venue }}></p>
                         <p dangerouslySetInnerHTML={{ __html: event.eventDetails.venueAddress }}></p>
+
                     </div>
                     <div className={styles.EventCTA}>
                         <h3>Date & time</h3>
