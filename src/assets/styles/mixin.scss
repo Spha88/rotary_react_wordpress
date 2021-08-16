@@ -23,3 +23,38 @@ $body-font: Open Sans,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,He
         -moz-box-shadow: 1px 3px 16px 1px rgba(0,0,0,0.61);
     }
 }
+/* @import '../../../assets/styles/variables.scss'; */
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 425px;
+
+/* Media Query */
+@mixin media($bp) {
+    transition: all 500ms ease-in-out;
+    @if $bp == 1024px {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    } @else if $bp == 768px {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $bp == 425px {
+        @media (max-width: 425px) {
+            @content;
+        }
+    }
+}
+
+@mixin centerBackground {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Display element flex and center horizontal and vertical */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
