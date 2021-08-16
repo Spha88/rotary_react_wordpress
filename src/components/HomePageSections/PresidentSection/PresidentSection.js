@@ -7,7 +7,7 @@ import Button from '../../../UI/Button/Button';
 
 const PresidentSection = () => {
 
-    const mediaMatch = window.matchMedia('(max-width: 768px)')
+
 
     const [state, setState] = useState({
         loading: true,
@@ -15,11 +15,12 @@ const PresidentSection = () => {
         page: [],
 
         // for the length of the extract
-        numberOfWords: mediaMatch.matches ? 50 : 90,
+        numberOfWords: 90,
     })
 
     useEffect(() => {
         // Check the size of the screen. 
+        const mediaMatch = window.matchMedia('(max-width: 768px)')
 
         const handler = e => setState(state => ({ ...state, numberOfWords: e.matches ? 50 : 90 }))
         mediaMatch.addEventListener('change', handler);
@@ -39,7 +40,7 @@ const PresidentSection = () => {
 
         return () => mediaMatch.removeEventListener('change', handler);
 
-    }, [])
+    }, []);
 
     const { page, loading, error, numberOfWords } = state;
 

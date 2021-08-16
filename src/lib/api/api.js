@@ -3,7 +3,7 @@ import axios from 'axios';
 export const fetchData = (query, variables = {}) => {
   return axios({
     method: 'post',
-    url: 'http://localhost/wordpress_rotary/graphql',
+    url: 'https://rotary.netslate.co.za/api/graphql',
     data: {
       query: query,
       variables: variables
