@@ -1,18 +1,35 @@
+@import '../../../assets/styles/mixin.scss';
+
 .Members {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 2rem 0;
+    @include media($mobile) {
+        padding-top: 1rem;
+    }
     .MemberCard {
         width: 32%;
         margin-bottom: 3rem;
         text-align: center;
+        @include media($mobile) {
+            width: 100%;
+            margin-bottom: 1rem;
+            background-color: $grey;
+            padding-bottom: 1.5rem;
+            .ProPic {
+                height: 400px !important;
+            }
+        }
         .ProPic {
             width: 100%;
             height: 400px;
             background-size: cover;
             background-position: top center;
             transition: background-size 200ms ease-in;
+            @include media($tablet) {
+                height: 300px;
+            }
         }
         h2 {
             margin: 1rem 0 0 0;
