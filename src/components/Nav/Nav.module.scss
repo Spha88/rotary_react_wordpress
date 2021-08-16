@@ -6,6 +6,9 @@
     border-bottom: 1px solid $border-grey;
     display: flex;
     justify-content: center; 
+    @include media($tablet) {
+        display: none;
+    }
     ul {
         width: 1024px;
         display: flex;
