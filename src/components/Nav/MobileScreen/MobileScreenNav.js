@@ -1,11 +1,15 @@
-import React from 'react';
-import styles from './Nav.module.scss';
+import React, { useState } from 'react';
+import styles from './MobileScreenNav.module.scss';
 import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
+
+    const [open, setOpen] = useState(false);
+
     return (
-        <nav className={styles.Nav}>
-            <ul>
+        <div className={styles.Nav}>
+            <button onClick={() => setOpen(!open)}>Menu</button>
+            <ul style={{ display: open ? 'block' : 'none' }}>
                 <li>
                     <NavLink to="/" activeClassName={styles.Active} exact>About Rotary</NavLink>
                 </li>
@@ -22,7 +26,7 @@ const Nav = () => {
                     <NavLink to="/Members" activeClassName={styles.Active} >Members</NavLink>
                 </li>
             </ul>
-        </nav>
+        </div>
     )
 }
 

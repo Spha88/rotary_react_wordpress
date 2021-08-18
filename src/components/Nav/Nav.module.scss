@@ -1,0 +1,9 @@
+@import '../../assets/styles/mixin.scss';
+
+.Nav {
+    background-color: $grey;
+    border-top: 1px solid $border-grey;
+    border-bottom: 1px solid $border-grey;
+    display: flex;
+    justify-content: center;
+}
