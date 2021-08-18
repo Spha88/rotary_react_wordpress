@@ -7,7 +7,6 @@ import Events from '../../components/EventsComponents/Events/Events';
 import { getEvents } from '../../lib/api/events';
 import Loader from '../../UI/Loader/Loader';
 import ErrorLoading from '../../UI/ErrorLoading/ErrorLoading';
-import NextEventSection from '../../components/HomePageSections/NextEventSection/NextEventSection';
 
 const EventsPage = () => {
     const [state, setState] = useState({
@@ -33,8 +32,6 @@ const EventsPage = () => {
     return (
         <div className={styles.Events} style={{ backgroundImage: `url(${textured_bg})` }}>
             <PageHeader label="Events" backgroundImage={events_bg} />
-
-            <NextEventSection />
 
             {!loading && !error && <Events events={events} />}
 
