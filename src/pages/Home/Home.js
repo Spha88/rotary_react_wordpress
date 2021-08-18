@@ -4,7 +4,6 @@ import CausesSection from '../../components/HomePageSections/CausesSection/Cause
 import Hero from '../../components/HomePageSections/Hero/Hero';
 import JoinSection from '../../components/HomePageSections/JoinSection/JoinSection';
 import LatestStories from '../../components/HomePageSections/LatestStoriesSection/LatestStories';
-import NextEventSection from '../../components/HomePageSections/NextEventSection/NextEventSection';
 import PresidentSection from '../../components/HomePageSections/PresidentSection/PresidentSection';
 
 const Home = () => {
@@ -14,9 +13,8 @@ const Home = () => {
             <AboutSection />
             <CausesSection />
             <LatestStories />
-            <NextEventSection />
-            <JoinSection />
             <PresidentSection />
+            <JoinSection />
         </div>
     )
 }
