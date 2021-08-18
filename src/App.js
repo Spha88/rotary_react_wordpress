@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styles from './App.module.scss';
 import Header from './components/Header/Header';
-import Nav from './components/Nav/Nav';
+import Nav from './components/Nav/LargeScreen/Nav';
 import CausesPage from './pages/Causes/CausesPage';
 import SingleCausePage from './pages/Causes/SingleCausePage/SingleCausePage';
 import Events from './pages/Events/EventsPage';
