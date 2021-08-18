@@ -21,9 +21,6 @@ const Nav = () => {
                 <li>
                     <NavLink to="/Members" activeClassName={styles.Active} >Members</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/contact-us" activeClassName={styles.Active} >Contact Us</NavLink>
-                </li>
             </ul>
         </nav>
     )
