@@ -39,16 +39,19 @@ const MemberSinglePage = () => {
                 <div className={styles.MemberPage}>
                     <div className={styles.Content}>
                         {!loading && !error && (
-                            <div className={styles.MemberHeader}>
-                                <div className={styles.MemberImage}>
-                                    <img src={member.memberDetails.profilePicture.sourceUrl}
-                                        alt={member.memberDetails.profilePicture.altText ? member.memberDetails.profilePicture.altText : "profile picture"}
-                                    />
-                                </div>
-                                <div className={styles.MemberDetails}>
+                            <div className={styles.MemberContainer}>
+                                <header>
                                     <h2>{member.memberDetails.names + " " + member.memberDetails.surname}</h2>
                                     <h5>{member.memberDetails.position}</h5>
                                     <p>Active since {member.memberDetails.joiningDate}</p>
+                                </header>
+
+                                <div className={styles.MemberDetails}>
+                                    <div className={styles.MemberImage}>
+                                        <img src={member.memberDetails.profilePicture.sourceUrl}
+                                            alt={member.memberDetails.profilePicture.altText ? member.memberDetails.profilePicture.altText : "profile picture"}
+                                        />
+                                    </div>
                                     <div className={styles.Bio} dangerouslySetInnerHTML={{ __html: member.memberDetails.rotaryBio }}></div>
                                 </div>
                             </div>
