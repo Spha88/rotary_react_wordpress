@@ -20,14 +20,29 @@
                     margin: 0;
                     font-weight: bold;
                 }
+                @include media($mobile) {
+                    padding-bottom: 1rem;
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
             }
             .MemberDetails {
                 display: flex;
+                @include media($mobile) {
+                    flex-direction: column;
+                }
                 .MemberImage {
                     width: 40%;
                     margin-right: 2rem;
                     padding-top: 10px; //align the top of the pic with the font on desktop
                     img {
+                        width: 100%;
+                    }
+                    @include media($laptop) {
+                        margin-right: 0;
+                    }
+                    @include media($mobile) {
                         width: 100%;
                     }
                 }
@@ -39,6 +54,10 @@
                         &:first-child {
                             margin-top: 0;
                         }
+                    }
+                    @include media($mobile) {
+                        width: 100%;
+                        padding: 1rem 0;
                     }
                 }
                 
