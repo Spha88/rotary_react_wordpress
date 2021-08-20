@@ -11,8 +11,8 @@ $grey: #f8f9fa;
 $border-grey: rgba(187, 195, 209, 0.719);
 
 /*Fonts*/
-$heading-font: Roboto Slab,TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif;
-$body-font: Open Sans,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+$heading-font: 'Montserrat', sans-serif;
+$body-font: 'Work Sans', sans-serif;
 
 /*Mixin */
 @mixin box-shadow-hover {
