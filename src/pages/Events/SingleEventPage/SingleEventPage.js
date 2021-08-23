@@ -38,6 +38,7 @@ const SingleEventPage = () => {
         <div className={styles.SingleEventPage}>
             <Container>
 
+                {/** Go back button */}
                 <div className={styles.PageNav}>
                     <span className={styles.Back} onClick={() => history.goBack()}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -47,6 +48,7 @@ const SingleEventPage = () => {
                     </span>
                 </div>
 
+                {/** Event Banner */}
                 {!loading && !error && <NextEventSection singleEvent={event} />}
 
                 <div className={styles.EventContainer}>
@@ -63,11 +65,6 @@ const SingleEventPage = () => {
                         {error && <ErrorLoading />}
 
                     </div>
-
-                    <aside>
-
-                    </aside>
-
                 </div>
 
 

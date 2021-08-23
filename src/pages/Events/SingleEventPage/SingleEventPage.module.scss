@@ -22,19 +22,18 @@
         display: flex;
         .Event {
             width: 65%;
+            padding-left: 5rem;
             .EventDetails {
-                padding: 0 3rem;
                 h2 {
                     font-family: $body-font;
+                    margin-top: 0;
                 }
                 
             }
-        }
-        aside {
-            width: 35%;
-            // border-left: 1px solid $border-grey;
-            padding: 1rem;
-            padding-top: 4rem;
+            @include media($tablet) {
+                width: 100%;
+                padding-left: 0;
+            }
         }
     }
 }
