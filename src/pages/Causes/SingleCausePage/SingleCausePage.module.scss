@@ -1,3 +1,5 @@
+@import './../../../assets/styles/mixin.scss';
+
 .SingleCausePage {
     .PageLayout {
         display: flex;
@@ -8,7 +10,12 @@
             article {
                 img {
                     width: 100%;
-                    display: none;
+                    height: 450px;
+                    object-fit: cover;
+                    object-position: center center;
+                    @include media($tablet) {
+                        height: 300px;
+                    }
                 }
                 .FeaturedImage {
                     height: 450px;
@@ -19,9 +26,22 @@
                     }
                 }
             }
+            @include media($mobile) {
+                width: 100%;
+            }
         }
         aside {
             width: 38%;
+            @include media($tablet) {
+                width: 40%;
+            }
+            @include media($mobile) {
+                width: 100%;
+            }
+        }
+        @include media($mobile) {
+            flex-direction: column;
+            padding-top: 1rem;
         }
     }
 }

@@ -44,7 +44,7 @@ const SingleCausePage = () => {
                     <div className={styles.ArticleContainer}>
                         {!loading && !error &&
                             <article>
-                                <div className={styles.FeaturedImage} style={{ backgroundImage: `url(${cause.featuredImage.node.sourceUrl})` }}></div>
+
                                 <img src={cause.featuredImage.node.sourceUrl} alt={cause.featuredImage.node.altText} />
                                 <div dangerouslySetInnerHTML={{ __html: cause.content }} />
                             </article>
