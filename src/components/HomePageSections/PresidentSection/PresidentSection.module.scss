@@ -2,12 +2,20 @@
 
 .President {
     padding: 5rem 0;
+    @include media($mobile) {
+        padding: 3rem 0;
+    }
     h1 {
         text-align: center;
         font-size: 3rem;
         font-weight: normal;
         color: $rotary-dark-blue;
         margin: 0 0 3rem;
+        @include media($mobile) {
+            line-height: normal;
+            margin: 0 0 1.5rem;
+            font-size: 2rem;
+        }
     }
     .Content {
         display: flex;
