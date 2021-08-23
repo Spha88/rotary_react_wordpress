@@ -1,11 +1,13 @@
 @import '../../../assets/styles/mixin.scss';
 
 .NextEventSection {
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0;
+    width: 100%;
     .ContentContainer {
         background-position: center center;
         background-size: 100% auto;
         padding: 3rem 3rem;
+        width: 100% !important;
         max-width: 1200px;
         min-height: 500px;
         margin: 0 auto;
@@ -40,8 +42,11 @@
             padding: 2rem 5rem 0 4rem;
             color: $white;
             z-index: 1;
+            @include media($laptop) {
+                width: 60%;
+                padding: 1rem;
+            }
             @include media($tablet) {
-                padding: 1rem 1rem 1rem 2rem;
                 width: 50%;
             }
             @include media($mobile) {
@@ -52,7 +57,7 @@
                 font-weight: normal;
                 font-size: 1rem;
             }
-            h1 { color: $rotary-yellow; font-size: 3rem;}
+            h1 { color: $rotary-yellow; font-size: 3rem; margin: 0}
             p { padding: 0; margin: 0; font-weight: bold;}
             text-shadow: 3px 3px 5px #000;
         }
@@ -62,6 +67,9 @@
             width: 30%;
             height: 100%;
             z-index: 2;
+            @include media($laptop) {
+                width: 40%;
+            }
             @include media($tablet) {
                 width: 50%;
                 padding: 1rem;

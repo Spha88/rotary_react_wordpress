@@ -83,8 +83,6 @@ const NextEventSection = ({ singleEvent }) => {
                             </svg>
                             {formatDate(event.eventDetails.dateAndTime, true)}
                         </p>
-
-                        <p className={styles.AddToCalender}><span>+</span> Add to Calender</p>
                         <button className={styles.BookBtn}>Book</button>
                         <button className={styles.PromoteBtn}>Share</button>
                     </div>
