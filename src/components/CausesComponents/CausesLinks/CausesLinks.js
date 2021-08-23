@@ -38,10 +38,6 @@ const CausesLinks = () => {
                         {causes && causes.map(cause => (
                             <li key={cause.id}>
                                 <NavLink to={`/causes/${cause.slug}`} activeClassName={styles.Active}>
-                                    <div className={styles.BackgroundImg}
-                                        style={{ backgroundImage: `url(${cause.featuredImage.node.sourceUrl})` }}
-                                    >
-                                    </div>
                                     <img src={cause.featuredImage.node.sourceUrl} alt={cause.featuredImage.node.altText} />
                                     <h4>{cause.title}</h4>
                                 </NavLink>

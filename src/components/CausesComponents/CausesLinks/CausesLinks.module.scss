@@ -23,18 +23,26 @@
                 .BackgroundImg {
                     width: 40%;
                     height: 90px;
+                    display: none;
                     background: {
                         size: cover;
                         position: center center;
                     }
                 }
                 img {
-                    width: 50%;
-                    display: none;
+                    width: 40%;
+                    height: 100% !important;
+                    object-fit: cover;
                 }
                 h4 {
                     width: 60%;
                     padding: 0 0 0 1rem;
+                    line-height: normal;
+                    font-weight: normal;
+                    margin: 0;
+                    @include media($tablet) {
+                        font-size: .8em;
+                    }
                 }
             }
         }
