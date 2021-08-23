@@ -5,6 +5,9 @@
     width: 100%;
     color: $rotary-dark-blue;
     border-bottom: 1px solid $border-grey;
+    @include media($mobile) {
+        padding: 0 0 1rem 0;
+    }
     h2 {
         
         margin-top: 0;

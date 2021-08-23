@@ -4,6 +4,9 @@
     .Layout {
         display: flex;
         align-items: flex-start;
+        @include media($mobile) {
+            flex-direction: column;
+        }
         .Main {
             width: 65%;
             padding-right: 1rem;
@@ -39,13 +42,35 @@
                     object-fit: cover;
                 }
             }
+            @include media($mobile) {
+                width: 100%;
+                padding: 0;
+                article {
+                    margin-bottom: 1rem;
+                    padding: 1rem 0;
+                    h2 {
+                        font-size: 2rem;
+                    }
+                    .Author {
+                        margin: 0 0 1rem 0
+                    }
+                }
+            }
         }
         aside {
             padding: 5rem 0 0 1rem;
             width: 35%;
             border-left: 1px solid $border-grey;
             margin-left: 1rem;
-
+            @include media($tablet) {
+                margin-left: 0;
+                padding: 5rem 0 0 0;
+            }
+            @include media($mobile) {
+                padding: 1rem 0 0 0;
+                width: 100%;
+                border: none;
+            }
         }
         
     }
