@@ -4,6 +4,9 @@
     padding: 1rem;
     border-bottom: 1px solid $border-grey;
     margin-bottom: 2rem;
+    @include media($mobile) {
+        padding: 1rem 0;
+    }
     h2 {
         margin-top: 0;
         color: $rotary-dark-blue;
