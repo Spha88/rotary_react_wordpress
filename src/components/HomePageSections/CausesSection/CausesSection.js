@@ -47,7 +47,9 @@ const CausesSection = () => {
                             </div>
                         ))}
                     </div>
-                    <ViewAllBtn to="/causes" label="View All" />
+                    <div className={styles.BtnContainer}>
+                        <ViewAllBtn to="/causes" label="View All" />
+                    </div>
 
                 </Container>
             }

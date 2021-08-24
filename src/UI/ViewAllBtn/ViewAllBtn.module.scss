@@ -1,11 +1,10 @@
 @import '../../assets/styles/mixin.scss';
 
 .ViewAllBtn {
-    display: block;
-    width: 200px;
+    display: inline-block;
     text-align: center;
-    padding: 15px 60px;
-    margin: 30px auto 0;
+    padding: 10px 40px;
+    margin: 3rem 0 0 0;
     border: 1px solid $rotary-sky-blue;
     color: $rotary-dark-blue;
     font-weight: bold;
