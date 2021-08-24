@@ -16,9 +16,10 @@
                 margin-bottom: 3rem;
                 border-bottom: 1px solid $border-grey;
                 h2 {
-                    margin: 0;
+                    margin: 0 0 1rem 0;
                     font-size: 3.5em;
                     font-weight: 300;
+                    line-height: normal;
                 }
                 .Date {
                     display: flex;
