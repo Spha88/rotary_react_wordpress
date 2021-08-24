@@ -11,6 +11,7 @@ import MembersPage from './pages/Members/MembersPage';
 import News from './pages/News/News';
 import NewsSinglePage from './pages/News/NewsSinglePage/NewsSinglePage';
 import Nav from './components/Nav/Nav';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
 
           </Switch>
         </div>
+
+        <Footer />
       </div>
     </Router>
   );

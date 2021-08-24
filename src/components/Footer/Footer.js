@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Footer.module.scss';
-import Container from '../UI/Container';
+import { Container } from '../../UI/Container';
 
 const Footer = () => {
     const date = new Date();
@@ -11,32 +11,31 @@ const Footer = () => {
                 <div className={styles.Row}>
                     <div className={styles.LogoCopyRight + ' ' + styles.FooterSection}>
                         <div className={styles.Logo}>
-                            <h2>Aseza</h2>
-                            <h3>Project Managers</h3>
+                            <h2>Rotary</h2>
+                            <h3>Port Alfred</h3>
                         </div>
                         <div className={styles.CopyRight}>
-                            <h5>&copy; Aseza Project Managers {date.getFullYear()}</h5>
+                            <h5>&copy; Rotary Port Alfred {date.getFullYear()}</h5>
                             <h5>All Rights Reserved</h5>
                         </div>
                     </div>
                     <div className={styles.ContactDetails + ' ' + styles.FooterSection}>
                         <ul>
                             <li>(+2751) 3655 9555</li>
-                            <li><a href="mailto:support@aseza.org">support@aseza.org</a></li>
-                            <li><a href="mailto:hello@aseza.org">hello@aseza.org</a></li>
-                            <li>356 King Williams Town</li>
+                            <li><a href="mailto:support@aseza.org">support@rotarypa.co.za</a></li>
+                            <li><a href="mailto:hello@aseza.org">hello@rotarypa.co.za</a></li>
+                            <li>Port Alfred</li>
                             <li>Easter Cape, SA</li>
                         </ul>
                     </div>
-
                     <div className={styles.Nav + ' ' + styles.FooterSection}>
                         <ul>
                             <li><NavLink activeClassName={styles.Active} to="/" exact>Home</NavLink></li>
-                            <li><NavLink activeClassName={styles.Active} to="/page/about-page">About Us</NavLink></li>
-                            <li><NavLink activeClassName={styles.Active} to="/projects">Projects</NavLink></li>
-                            <li><NavLink activeClassName={styles.Active} to="/services">Services</NavLink></li>
-                            <li><NavLink activeClassName={styles.Active} to="/news">News</NavLink></li>
-                            <li><NavLink activeClassName={styles.Active} to="/page/contact">Contact Us</NavLink> </li>
+                            <li><NavLink activeClassName={styles.Active} to="/causes">Causes</NavLink></li>
+                            <li><NavLink activeClassName={styles.Active} to="/events">Events</NavLink></li>
+                            <li><NavLink activeClassName={styles.Active} to="/news">Services</NavLink></li>
+                            <li><NavLink activeClassName={styles.Active} to="/members">News</NavLink></li>
+                            <li><NavLink activeClassName={styles.Active} to="/">Contact Us</NavLink> </li>
                         </ul>
                     </div>
 
