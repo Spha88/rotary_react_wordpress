@@ -2,6 +2,9 @@
 
 .Header {
     padding: 1rem;
+    @include media($tablet) {
+        display: none;
+    }
     .Logo {
         display: flex;
         justify-content: center;

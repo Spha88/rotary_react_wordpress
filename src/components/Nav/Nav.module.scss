@@ -6,4 +6,12 @@
     border-bottom: 1px solid $border-grey;
     display: flex;
     justify-content: center;
+    z-index: 100;
+    @include media($tablet) {
+        position: sticky;
+        width: 100%;
+        left: 0;
+        top: 0;
+        min-height: 60px;
+    }
 }

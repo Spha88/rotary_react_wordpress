@@ -7,8 +7,21 @@
     width: 100%;
     @include media($tablet) {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
+        align-items: center;
         padding: 1rem;
+    }
+    .LogoContainer {
+        display: flex;
+        align-items: center;
+        img {
+            width: 90px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1rem;
+            padding-left: 10px;
+        }
     }
     button {
         z-index: 2;
@@ -26,7 +39,7 @@
         padding: 2rem;
         padding-top: 4rem;
         margin: 0;
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
         background-color: transparentize($color: $white, $amount: 0.2);
