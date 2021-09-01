@@ -35,7 +35,7 @@ const EventsPage = () => {
 
             {!loading && !error && <Events events={events} />}
 
-            {loading && <Loader />}
+            {loading && <div className={styles.EventsLoaderContainer}><Loader /></div>}
 
             {error && <ErrorLoading />}
         </div>
