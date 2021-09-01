@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
+import { animateScroll as scroll } from 'react-scroll';
+
 import { Link } from 'react-router-dom';
 import styles from './News.module.scss';
 import { getAllPosts } from '../../lib/api/posts'
@@ -28,6 +31,8 @@ const News = () => {
         }
 
         fetchData()
+
+        scroll.scrollToTop()
     }, [])
 
     const { posts, loading, error } = state;

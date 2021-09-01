@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
+import { animateScroll as scroll } from 'react-scroll';
+
 import { getAllCauses } from '../../lib/api/causes';
 import { LeadParagraph } from '../../UI/LeadParagraph';
 import PageHeader from '../../UI/PageHeader/PageHeader';
@@ -24,7 +27,10 @@ const CausesPage = () => {
                 setState(state => ({ ...state, loading: false, error: true }))
             }
         }
+
         fetchAboutPage();
+
+        scroll.scrollToTop()
     }, [])
 
     const { loading, error, causes } = state;

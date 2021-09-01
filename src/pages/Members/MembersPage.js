@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
+import { animateScroll as scroll } from 'react-scroll';
+
 import PageHeader from '../../UI/PageHeader/PageHeader';
 import styles from './MembersPage.module.scss';
 import bg_image from '../../assets/images/members.jpg';
@@ -25,6 +28,8 @@ const MembersPage = () => {
             }
         }
         fetchData()
+
+        scroll.scrollToTop()
     }, [])
 
     const { loading, error, members } = state;

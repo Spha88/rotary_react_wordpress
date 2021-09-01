@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
+import { animateScroll as scroll } from 'react-scroll';
+
 import PageHeader from '../../UI/PageHeader/PageHeader';
 import events_bg from '../../assets/images/events_bg.jpg';
 import textured_bg from '../../assets/images/textured_bg.jpg';
@@ -25,6 +28,7 @@ const EventsPage = () => {
             }
         }
         fetchData()
+        scroll.scrollToTop()
     }, [])
 
     const { loading, error, events } = state;
