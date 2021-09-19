@@ -40,7 +40,7 @@ const MembersPage = () => {
 
             {!loading && !error && <Members members={members} />}
 
-            {loading && <Loader />}
+            {loading && <div className={styles.MembersLoaderContainer}><Loader /></div>}
 
             {error && <ErrorLoading />}
         </div>
